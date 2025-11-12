@@ -10,4 +10,4 @@ Para mover las piezas del puzzle se ha usado *drag and drop* en JS y *draggable 
 
 Aquí puedes ver cómo quedaría:
 
-![Juego de puzzle con la imagen de un perro](https://github.com/loli-digital/puzzle-drag-and-drop/cover.png)
+![Juego de puzzle con la imagen de un perro](cover.png)

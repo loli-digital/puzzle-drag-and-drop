@@ -1,0 +1,191 @@
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.layout__main {
+    width: 100%;
+    height: 100%;
+    margin-top: 4rem;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #447071;
+    text-shadow: 1px 1px 1px #a0abff;
+}
+
+.layout__game {
+    width: 100%;
+    height: 100%;
+    margin-top: 8rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+}
+
+.layout__piezas {
+    width: 33rem;
+    height: 33rem;
+    padding: 1rem;
+    background-color: #8fb3be;
+    box-shadow: 0 0 10px black;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.pieza__puzzle {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../img/dog-puzzle.png");
+    background-size: 300% 300%;
+    border: 1px solid lightslategray;
+    cursor: grab;
+    user-select: none;
+    transition: transform 0.3s;
+}
+
+.pieza__puzzle:active {
+    cursor: grabbing;
+}
+
+.pieza__puzzle:hover {
+    transform: scale(1.2);
+}
+
+.pieza__puzzle.colocada {
+    pointer-events: none;
+    cursor: default;
+}
+
+#pieza-puzzle-0 {
+    background-position: 0% 0%;
+}
+
+#pieza-puzzle-1 {
+    background-position: 50% 0%;
+}
+
+#pieza-puzzle-2 {
+    background-position: 100% 0%;
+}
+
+#pieza-puzzle-3 {
+    background-position: 0% 50%;
+}
+
+#pieza-puzzle-4 {
+    background-position: 50% 50%;
+}
+
+#pieza-puzzle-5 {
+    background-position: 100% 50%;
+}
+
+#pieza-puzzle-6 {
+    background-position: 0% 100%;
+}
+
+#pieza-puzzle-7 {
+    background-position: 50% 100%;
+}
+
+#pieza-puzzle-8 {
+    background-position: 100% 100%;
+}
+
+.layout__tablero {
+    width: 30rem;
+    height: 30rem;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    background-color: #8fb3be;
+    border: 1px solid lightslategray;
+    box-shadow: 0 0 10px black;
+}
+
+.hueco__tablero {
+    width: 10rem;
+    height: 10rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightslategray;
+}
+
+.hueco__tablero .pieza__puzzle {
+    width: 100%;
+    height: 100%;
+    background-size: 300% 300%;
+    position: static;
+    box-shadow: none;
+}
+
+/* Mensajes visuales (opcional) */
+.hueco-ocupado {
+    outline: 3px solid rgba(255, 0, 0, 0.2);
+}
+
+.hueco-correcto {
+    outline: 3px solid rgba(0, 200, 0, 0.2);
+}
+
+.icon__refresh svg {
+    width: 4rem;
+    height: 4rem;
+
+    fill: #2669b5;
+    cursor: pointer;
+
+    transition: all 0.3s linear;
+}
+
+.layout__mensaje {
+    transition: all 0.3s linear;
+}
+
+.layout__mensaje.mostrar__mensaje {
+    width: 30rem;
+    height: 15rem;
+   
+    position: absolute;
+
+    background-color: #2f3b94;
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    transform: scale(1.2);
+}
+
+.mensaje {
+    font-size: 2.5rem;
+    line-height: 5rem;
+    text-align: center;
+    color: white;
+}

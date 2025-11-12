@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
                         layoutMensaje.classList.add("mostrar__mensaje");
 
-                        mensaje.textContent = "¡Enhorabuena! Has terminado el puzzle";
+                        mensaje.textContent = "¡Enhorabuena! Has completado el puzzle";
                     }
 
                 } else {
